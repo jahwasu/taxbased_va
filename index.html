@@ -307,8 +307,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   <div class="p-title">기본 정보</div>
   <div class="p-desc">고객의 인적사항을 입력합니다.</div>
   <div class="g2">
-    <div class="field"><label>고객 성명</label><input id="name" autocomplete="off" placeholder="홍길동"></div>
-    <div class="field"><label>생년월일</label><input id="birth" autocomplete="off" placeholder="1990-01-01" oninput="calcAge()"></div>
+    <div class="field"><label>고객 성명</label><input id="name" autocomplete="new-password" placeholder="홍길동"></div>
+    <div class="field"><label>생년월일</label><input id="birth" autocomplete="new-password" placeholder="1990-01-01" oninput="calcAge()"></div>
   </div>
   <div class="g3">
     <div class="field"><label>성별</label><div class="btn-group"><div class="btn-opt" onclick="tog1('gen','남성',this)">남성</div><div class="btn-opt" onclick="tog1('gen','여성',this)">여성</div></div></div>
@@ -320,7 +320,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
     <div class="field"><label>부모 부양</label><div class="btn-group"><div class="btn-opt" onclick="tog1('dep','없음',this)">없음</div><div class="btn-opt" onclick="tog1('dep','있음',this)">있음</div></div></div>
   </div>
   <div class="g2">
-    <div class="field"><label>담당 상담사</label><input id="agent" autocomplete="off" placeholder="홍길동 상담사"></div>
+    <div class="field"><label>담당 상담사</label><input id="agent" autocomplete="new-password" placeholder="홍길동 상담사"></div>
     <div class="field"><label>상담 일자</label><input id="cdate" type="date"></div>
   </div>
   <div class="nav"><span></span><span style="font-size:12.6px;color:var(--text3)">1/6</span><button class="btn btn-next" onclick="goTo(1)">다음 →</button></div>
@@ -334,9 +334,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 
   <div class="sdiv"><span>소득·지출</span></div>
   <div class="g3">
-    <div class="field"><label>월 세후소득 (만원)</label><input id="income" type="number" autocomplete="off" oninput="updateStickyBar()" placeholder="0"></div>
+    <div class="field"><label>월 세후소득 (만원)</label><input id="income" type="number" autocomplete="new-password" oninput="updateStickyBar()" placeholder="0"></div>
     <div class="field"><label>월 고정지출 (만원)</label><input id="expense" type="number" placeholder="0"></div>
-    <div class="field"><label>월 저축가능 (만원)</label><input id="savable" type="number" autocomplete="off" oninput="updateStickyBar()" placeholder="0"></div>
+    <div class="field"><label>월 저축가능 (만원)</label><input id="savable" type="number" autocomplete="new-password" oninput="updateStickyBar()" placeholder="0"></div>
   </div>
   <div class="g2">
     <div class="field"><label>대출 잔액 (만원)</label><input id="loan" type="number" placeholder="0"></div>
@@ -351,7 +351,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
       예금 잔고 (만원)
       <span style="font-size:11px;color:var(--teal);font-weight:400;background:rgba(29,158,117,.12);border:1px solid rgba(29,158,117,.25);border-radius:4px;padding:1px 7px;white-space:nowrap">보증금도 예금성으로 입력가능</span>
     </label>
-    <input id="deposit" type="number" autocomplete="off" oninput="updateStickyBar()" placeholder="0">
+    <input id="deposit" type="number" autocomplete="new-password" oninput="updateStickyBar()" placeholder="0">
   </div>
 
   <div class="sdiv">
@@ -415,26 +415,26 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   <div class="toggle-row">
     <div class="toggle-label"><span class="toggle-dot" style="background:var(--blue)"></span>ISA</div>
     <div class="toggle-wrap"><label class="switch"><input type="checkbox" id="isa_chk" onchange="toggleTax('isa')"><span class="slider"></span></label></div>
-    <input class="tax-inp" type="number" autocomplete="off" id="isa_bal" oninput="updateStickyBar()" placeholder="0" disabled>
-    <input class="tax-inp" type="number" autocomplete="off" id="isa_mo" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="isa_bal" oninput="updateStickyBar()" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="isa_mo" placeholder="0" disabled>
   </div>
   <div class="toggle-row">
     <div class="toggle-label"><span class="toggle-dot" style="background:var(--teal)"></span>연금저축</div>
     <div class="toggle-wrap"><label class="switch"><input type="checkbox" id="pension_chk" onchange="toggleTax('pension')"><span class="slider"></span></label></div>
-    <input class="tax-inp" type="number" autocomplete="off" id="pension_bal" oninput="updateStickyBar()" placeholder="0" disabled>
-    <input class="tax-inp" type="number" autocomplete="off" id="pension_mo" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="pension_bal" oninput="updateStickyBar()" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="pension_mo" placeholder="0" disabled>
   </div>
   <div class="toggle-row">
     <div class="toggle-label"><span class="toggle-dot" style="background:var(--purple)"></span>IRP</div>
     <div class="toggle-wrap"><label class="switch"><input type="checkbox" id="irp_chk" onchange="toggleTax('irp')"><span class="slider"></span></label></div>
-    <input class="tax-inp" type="number" autocomplete="off" id="irp_bal" oninput="updateStickyBar()" placeholder="0" disabled>
-    <input class="tax-inp" type="number" autocomplete="off" id="irp_mo" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="irp_bal" oninput="updateStickyBar()" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="irp_mo" placeholder="0" disabled>
   </div>
   <div class="toggle-row">
     <div class="toggle-label"><span class="toggle-dot" style="background:var(--amber)"></span>비과세연금</div>
     <div class="toggle-wrap"><label class="switch"><input type="checkbox" id="va_chk" onchange="toggleTax('va')"><span class="slider"></span></label></div>
-    <input class="tax-inp" type="number" autocomplete="off" id="va_bal" oninput="updateStickyBar()" placeholder="0" disabled>
-    <input class="tax-inp" type="number" autocomplete="off" id="va_mo" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="va_bal" oninput="updateStickyBar()" placeholder="0" disabled>
+    <input class="tax-inp" type="number" autocomplete="new-password" id="va_mo" placeholder="0" disabled>
   </div>
   <div class="nav"><button class="btn btn-prev" onclick="goTo(1)">← 이전</button><span style="font-size:12.6px;color:var(--text3)">3/6</span><button class="btn btn-next" onclick="goTo(3)">다음 →</button></div>
 </div>
@@ -538,7 +538,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
       <div class="field">
         <label style="font-size:11.5px;color:var(--teal)">연금저축 월납(만원)</label>
-        <input type="number" autocomplete="off" id="new_pension_mo" placeholder="미가입 시 비워두기"
+        <input type="number" autocomplete="new-password" id="new_pension_mo" placeholder="미가입 시 비워두기"
           oninput="updateYearend('pension')"
           style="width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13.8px">
         <div style="display:flex;align-items:center;gap:6px;margin-top:6px;flex-wrap:wrap">
@@ -547,7 +547,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
       </div>
       <div class="field">
         <label style="font-size:11.5px;color:var(--purple)">IRP 월납(만원)</label>
-        <input type="number" autocomplete="off" id="new_irp_mo" placeholder="미가입 시 비워두기"
+        <input type="number" autocomplete="new-password" id="new_irp_mo" placeholder="미가입 시 비워두기"
           oninput="updateYearend('irp')"
           style="width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13.8px">
         <div style="display:flex;align-items:center;gap:6px;margin-top:6px;flex-wrap:wrap">
@@ -556,7 +556,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
       </div>
       <div class="field">
         <label style="font-size:11.5px;color:var(--amber)">변액연금 월납(만원)</label>
-        <input type="number" autocomplete="off" id="new_va_mo" placeholder="미가입 시 비워두기"
+        <input type="number" autocomplete="new-password" id="new_va_mo" placeholder="미가입 시 비워두기"
           oninput="calcSimResults()"
           style="width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13.8px">
         <div style="font-size:10.5px;color:var(--text3);margin-top:6px">10년↑ 유지 시 운용수익 비과세</div>
@@ -755,11 +755,11 @@ function addSavings(){
       <div class="field"><label>가입 연월</label><div class="ym-wrap" id="ym-sav-dyn-${idx}"></div></div>
       <div class="field">
         <label>월 납입액 (만원)</label>
-        <input id="sav_dyn_${idx}_mo" type="number" autocomplete="off" placeholder="0" oninput="autoCalcSavDyn(${idx})">
+        <input id="sav_dyn_${idx}_mo" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="new-password" placeholder="0" oninput="this.value=this.value.replace(/[^0-9]/g,'');autoCalcSavDyn(${idx})">
       </div>
       <div class="field">
         <label>현재 잔고 (만원)</label>
-        <input id="sav_dyn_${idx}_bal" type="number" autocomplete="off" placeholder="자동계산" oninput="clearSavDynHint(${idx})">
+        <input id="sav_dyn_${idx}_bal" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="new-password" placeholder="자동계산" oninput="this.value=this.value.replace(/[^0-9]/g,'');clearSavDynHint(${idx})">
         <div class="auto-hint" id="sav_dyn_${idx}_hint"></div>
       </div>
     </div>`;
@@ -1002,7 +1002,7 @@ function buildAlloc(){
   goals.forEach(g=>{
     html+=`<div class="alloc-row">
       <div style="font-size:14.9px;color:var(--text2)">${g.label}</div>
-      <input class="alloc-inp" type="number" id="${g.id}" placeholder="0" oninput="updSum()" autocomplete="off" name="alloc_field_${g.id}">
+      <input class="alloc-inp" type="text" inputmode="numeric" pattern="[0-9]*" id="${g.id}" placeholder="0" oninput="this.value=this.value.replace(/[^0-9]/g,'');updSum()" autocomplete="new-password" name="f_${g.id}_${Date.now()}_${Math.floor(Math.random()*99999)}">
       <div style="font-size:12.6px;color:var(--text3);text-align:right" id="${g.id}_pct">—</div>
     </div>`;
   });
